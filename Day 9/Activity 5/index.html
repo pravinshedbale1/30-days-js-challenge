@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js"></script>
+    <title>Event Handling</title>
+    <style>
+      .red {
+        border: 5px solid red;
+      }
+      .blue {
+        border: 5px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="p1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nesciunt
+      quisquam sapiente. Distinctio amet enim velit accusamus nulla sint nobis,
+      tenetur provident blanditiis. Illo, neque nihil sequi iure praesentium
+      explicabo.
+    </p>
+    <button id="btn1" onclick="changeText()">
+      Click me to change text of p
+    </button>
+
+    <button
+      id="btn2"
+      onmouseover="changeBorderColor()"
+      onmouseleave="changeBorderColor()"
+      class="red"
+    >
+      Hover me to change border color
+    </button>
+  </body>
+</html>
