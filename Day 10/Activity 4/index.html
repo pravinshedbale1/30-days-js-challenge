@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Event</title>
+  </head>
+  <body>
+    <form id="myForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required /><br /><br />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required /><br /><br />
+      <select name="country" id="countries" onchange="handleCountryChange()">
+        <option value="United States of America">
+          United States of America
+        </option>
+        <option value="India">India</option>
+        <option value="Britain">Britain</option>
+      </select>
+      <br /><br />
+      <p id="selectedCountry"></p>
+      <br /><br />
+      <button type="submit">Submit</button>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>

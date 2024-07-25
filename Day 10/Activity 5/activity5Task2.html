@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Event Delegation Example</title>
+  </head>
+  <body>
+    <div id="parent">
+      <button class="child">Existing Child 1</button>
+      <button class="child">Existing Child 2</button>
+    </div>
+    <button id="addChild">Add Child</button>
+
+    <script>
+      const parent = document.getElementById("parent");
+      const addChildButton = document.getElementById("addChild");
+
+      parent.addEventListener("click", function (event) {
+        if (event.target && event.target.classList.contains("child")) {
+          console.log("Child element clicked:", event.target);
+        }
+      });
+
+      addChildButton.addEventListener("click", function () {
+        const newChild = document.createElement("button");
+        newChild.classList.add("child");
+        newChild.textContent = "New Child";
+        parent.appendChild(newChild);
+      });
+    </script>
+  </body>
+</html>
